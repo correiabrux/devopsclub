@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: devopsclub
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: devopsclub
+    spec:
+      containers:
+        - name: devopsclub
+          image: correiabrux/devopsclub:1.2 
+          ports:
+          - containerPort: 80
+            protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devopsclub
+  labels:
+    app: devopsclub
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: devopsclub
+  type: LoadBalancer

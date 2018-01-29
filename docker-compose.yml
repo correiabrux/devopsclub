@@ -1,0 +1,9 @@
+version: '2'
+services:
+  devopsclub:
+    build: .
+    container_name: hugo
+    ports:
+      - "80:80/tcp"
+    volumes:
+      - ./files/gohugo/minimal/devopsclub/content/post/:/home/devopsclub/content/post

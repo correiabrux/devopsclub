@@ -1,0 +1,49 @@
+baseURL = "http://devopsclub.com.br/"
+languageCode = "pt-BR"
+title = "DevopsClub"
+theme = "minimal"
+disqusShortname = "username" # delete this to disable disqus comments
+googleAnalytics = ""
+
+[params]
+    author = "Bruno Correia"
+    description = "Documentando as aventuras de operações"
+    githubUsername = "#"
+    accent = "red"
+    showBorder = true
+    backgroundColor = "white"
+    font = "Raleway" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "solarized-dark"
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    url = "/projetos/"
+    name = "Projetos"
+    weight = 3
+
+
+[[menu.icon]]
+    url = "mailto:correiabrux@gmail.com"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/correiabrux/"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/bruno-leite-62825b39/"
+    name = "linkedin"
+    weight = 4
