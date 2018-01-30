@@ -37,7 +37,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploy"
-                sh 'kubectl set image deployment/devopsclub devopsclub=devopsclub:${BUILD_NUMBER}'
+                sh 'kubectl set image deployment/devopsclub devopsclub=correiabrux/devopsclub:${BUILD_NUMBER}'
             }
         }
     }
