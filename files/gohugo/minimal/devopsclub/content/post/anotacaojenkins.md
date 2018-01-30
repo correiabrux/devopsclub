@@ -9,7 +9,7 @@ draft: false
 
 Na tentativa de evoluir o fluxo de deploy em um cluster kubernetes, estou documentando de alguma forma as minhas evoluções.
 
-Durante esse post, estou no passo de escrever um pipeline que funcione dentro do jenkins, realizando o deploy dentro do cluster kubernetes. 
+Durante esse post, estou no passo de escrever um pipeline que funcione dentro do jenkins, realizando o deploy para o cluster kubernetes. 
 
 ## Mão na massa
 
@@ -43,6 +43,12 @@ pipeline {
     }
 }
 ```
+
+Se não entendeu nada é porque não fui claro mesmo rsrs, afinal são 03 da manhã...
+
+Façamos o seguinte, se quiser entender acesse o repo desse projeto: `https://github.com/correiabrux/devopsclub`
+Além disso, fique de olho nesse post, pois pretendo documentar melhor, té mais...
+
 
 ----
 
