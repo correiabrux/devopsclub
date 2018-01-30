@@ -19,6 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploy"
+                sh 'gcloud container clusters get-credentials mycluster --zone us-central1-a --project myclusterk8s'
                 sh 'kubectl set image deployment/devopsclub devopsclub=correiabrux/devopsclub:${BUILD_NUMBER}'
             }
         }
