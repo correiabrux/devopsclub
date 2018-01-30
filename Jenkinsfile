@@ -4,11 +4,11 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                echo "Buld..."
-		            docker login -u ${USRDOCKERHUB} -p ${PASSDOCKERHUB}
-		            docker build -t devopsclub:${BUILD_NUMBER}
-		            docker tag devopsclub correiabrux/devopsclub:${BUILD_NUMBER}
-		            docker push correiabrux/devopsclub:${BUILD_NUMBER}
+                echo "Build..."
+		sh 'sudo docker login -u ${USRDOCKERHUB} -p ${PASSDOCKERHUB}'
+		sh 'sudo docker build -t devopsclub:${BUILD_NUMBER} .'
+		sh 'sudo docker tag devopsclub:${BUILD_NUMBER} correiabrux/devopsclub:${BUILD_NUMBER}'
+		sh 'sudo docker push correiabrux/devopsclub:${BUILD_NUMBER}'
             }
         }
         stage('Test'){
@@ -19,6 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploy"
+                sh 'kubectl set image deployment/devopsclub devopsclub=devopsclub:${BUILD_NUMBER}'
             }
         }
     }
