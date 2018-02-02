@@ -1,6 +1,6 @@
 ---
 title: "Brincando de Pipeline com Jenkins + Kubernetes"
-date: 2017-01-30
+date: 2018-01-30
 tags: [ "Jenkins", "Kubernetes" ]
 draft: false
 ---
